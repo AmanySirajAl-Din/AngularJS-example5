@@ -26,5 +26,12 @@
                 $scope.imgNum = "1";
             } 
         }
+        
+        // ====================================
+        // creating custom filters
+        // first, define the filter factory function
+        
+        // 2nd, register the filter factory with the module .. similar to controllers
+        
     }
 })();
