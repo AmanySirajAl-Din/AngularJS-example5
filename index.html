@@ -25,6 +25,9 @@
                     Change Image
                 </button>
                 <br/>
+                <!-- {{ currency_expression | currency : symbol : fractionSize}} -->
+                Cost: {{ imgCost | currency : "EGP" : 4 }}
+                <br/>
                 <img ng-src="images/img{{imgNum}}.jpg"/>
             </div>
         </div>

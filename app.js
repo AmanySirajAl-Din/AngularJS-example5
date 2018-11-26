@@ -9,6 +9,7 @@
     function MsgController($scope, $filter){
         $scope.name = "Amany";
         $scope.imgNum = "1";
+        $scope.imgCost = 0.45;
         
         $scope.sayMessage = function (){
             var msg = "Amany will get the job inshaAllah";
