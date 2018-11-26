@@ -11,7 +11,11 @@
         $scope.imgNum = "1";
         
         $scope.sayMessage = function (){
-            return "Amany will get the job inshaAllah";
+            var msg = "Amany will get the job inshaAllah";
+            
+            // using $filter service function to uppercase the msg 
+            var output = $filter('uppercase')(msg);
+            return output;
         };
         
         $scope.changeImg = function (){
