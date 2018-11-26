@@ -5,8 +5,8 @@
 
     .controller('MsgController', MsgController);
     
-    MsgController.$inject = ['$scope'];
-    function MsgController($scope){
+    MsgController.$inject = ['$scope', '$filter'];
+    function MsgController($scope, $filter){
         $scope.name = "Amany";
         $scope.imgNum = "1";
         
@@ -19,8 +19,7 @@
                 $scope.imgNum = "2";
             }else{
                 $scope.imgNum = "1";
-            }
-            
+            } 
         }
     }
 })();
