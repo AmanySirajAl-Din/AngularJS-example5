@@ -52,6 +52,7 @@
                 //change input
                 input = input || ""; // if input is un defined make input = ""
                 var changedInput = input.replace("will", "did")
+                changedInput = changedInput.replace("inshaAllah", "")
                 return changedInput;
             };
         }  
