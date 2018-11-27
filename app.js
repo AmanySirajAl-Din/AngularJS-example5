@@ -13,6 +13,8 @@
     .filter('past', pastFilter);
     
     // **Step3, Inject it with filterNameFilter
+    
+    // ++Step3, NO Change
     MsgController.$inject = ['$scope', '$filter', 'pastFilter'];
     function MsgController($scope, $filter, pastFilter){
         $scope.name = "Amany";
@@ -28,10 +30,12 @@
         };
         
         // **Step3 >>
+        
+        // ++Step3 >> add the new arguments
         $scope.makePastMsg = function (){
             var msg = "Amany will get the job inshaAllah";
         
-            var output = pastFilter(msg);
+            var output = pastFilter(msg, "some val");
             return output;
         };
         
