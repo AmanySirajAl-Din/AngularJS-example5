@@ -29,7 +29,15 @@
         
         // ====================================
         // creating custom filters
-        
+        // Step1, Define filter factory function (fff)
+        // fff which creates filtering function
+        function CustomFilterFactory(){
+            // fff produces filtering function
+            return function (input){
+                //change input
+                return changedInput;
+            }
+        }
         
     }
 })();
