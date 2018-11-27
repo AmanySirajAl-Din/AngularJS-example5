@@ -8,9 +8,10 @@
     // **Step2, register the filter factory with the module .. similar way to controllers
     // the name of the filter must be a valid angular expression identifier (same as naming JavaScript variable)
     //.filter(filterName, FilterFactoryFn);
+    .filter('past', pastFilter)
     
     // ++Step2, NO Change
-    .filter('past', pastFilter);
+    .filter('past', pastFilterWithCustomArg);
     
     // **Step3, Inject it with filterNameFilter
     
