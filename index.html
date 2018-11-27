@@ -18,7 +18,8 @@
         <h1>Filter</h1>
         <div ng-controller="MsgController">
             Message is: <br>
-            {{sayMessage()}}
+            Original: {{sayMessage()}} <br>
+            Past: {{ makePastMsg() }}
             
             <div>
                 <button ng-click="changeImg()">
