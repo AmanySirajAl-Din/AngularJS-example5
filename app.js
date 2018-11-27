@@ -48,10 +48,10 @@
     // fff which creates filtering function   
     
     // Creating custom filters with additional custom arguments ++
-    // ++Step1, Define filter factory function (fff)
+    // ++Step1, Define filter factory function with custom arguments
     function pastFilter(){
             // fff produces filtering function
-            return function (input){
+            return function (input, arg1){
                 //change input
                 input = input || ""; // if input is un defined make input = ""
                 var changedInput = input.replace("will", "did")
