@@ -8,7 +8,7 @@
     // Step2, register the filter factory with the module .. similar way to controllers
     // the name of the filter must be a valid angular expression identifier (same as naming JavaScript variable)
     //.filter(filterName, FilterFactoryFn);
-    .filter('custom', CustomFilterFactory);
+    .filter('past', pastFilter);
     
     // Step3, Inject it with filterNameFilter
     MsgController.$inject = ['$scope', '$filter', 'customFilter'];
