@@ -5,6 +5,10 @@
 
     .controller('MsgController', MsgController);
     
+    // Step2, register the filter factory with the module .. similar way to controllers
+    // the name of the filter must be a valid angular expression identifier (same as naming JavaScript variable)
+    .filter('custom', CustomFilterFactory);
+    
     MsgController.$inject = ['$scope', '$filter'];
     function MsgController($scope, $filter){
         $scope.name = "Amany";
@@ -37,7 +41,6 @@
                 //change input
                 return changedInput;
             }
-        }
-        
+        }        
     }
 })();
