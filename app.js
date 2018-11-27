@@ -52,17 +52,25 @@
     // Creating custom filters **
     // **Step1, Define filter factory function (fff)
     // fff which creates filtering function   
+    function pastFilter(){
+        // fff produces filtering function
+        return function (input){
+            //change input
+            input = input || ""; // if input is un defined make input = ""
+            var changedInput = input.replace("will", "did")
+            changedInput = changedInput.replace("inshaAllah", "")
+            return changedInput;
+        };
+    }  
     
     // Creating custom filters with additional custom arguments ++
     // ++Step1, Define filter factory function with custom arguments
-    function pastFilter(){
-            // fff produces filtering function
-            return function (input, arg1){
-                //change input
-                input = input || ""; // if input is un defined make input = ""
-                var changedInput = input.replace("will", "did")
-                changedInput = changedInput.replace("inshaAllah", "")
-                return changedInput;
-            };
-        }  
+    function pastFilterWithCustomArg(){
+        return function(input, target, replace){
+            //change input
+            input = input || ""; // if input is un defined make input = ""
+            var changedInput = input.replace(target, replace)
+            return changedInput;
+        }
+    }
 })();
