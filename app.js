@@ -41,12 +41,14 @@
         // creating custom filters
         // Step1, Define filter factory function (fff)
         // fff which creates filtering function
-        function CustomFilterFactory(){
+        function pastFilter(){
             // fff produces filtering function
             return function (input){
                 //change input
+                input = input || ""; // if input is un defined make input = ""
+                changedInput = input.replace("will", "did")
                 return changedInput;
-            }
+            };
         }        
     }
 })();
