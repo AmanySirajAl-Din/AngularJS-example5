@@ -11,7 +11,7 @@
     .filter('past', pastFilter)
     
     // ++Step2, NO Change
-    .filter('past', pastFilterWithCustomArg);
+    .filter('past2', pastFilterWithCustomArg);
     
     // **Step3, Inject it with filterNameFilter
     
@@ -23,20 +23,21 @@
         $scope.imgCost = 0.45;
         
         $scope.sayMessage = function (){
-            var msg = "Amany will get the job inshaAllah";
+            var msg = "Amany will get the job inshaAll ah";
             
             // using $filter service function to uppercase the msg 
-            var output = $filter('uppercase')(msg);
-            return output;
+            //var output = $filter('uppercase')(msg);
+            //return output;
+            
+            return msg;
         };
         
         // **Step3 >>
         
-        // ++Step3 >> add the new arguments
         $scope.makePastMsg = function (){
             var msg = "Amany will get the job inshaAllah";
         
-            var output = pastFilter(msg, "some val");
+            var output = pastFilter(msg);
             return output;
         };
         

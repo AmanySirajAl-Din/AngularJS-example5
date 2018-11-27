@@ -19,8 +19,9 @@
         <div ng-controller="MsgController">
             Message is: <br>
             Original: {{sayMessage()}} <br>
-            Past: {{ makePastMsg() }}
-            
+            Past: {{ makePastMsg() }} <br>
+            <!-- ++Step3, Applying it in HTML with the new arguments -->
+            Past with Arg: {{ sayMessage() | past2 : 'will' : 'did' }}
             <div>
                 <button ng-click="changeImg()">
                     Change Image
