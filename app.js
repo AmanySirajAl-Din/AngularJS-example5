@@ -23,7 +23,7 @@
         $scope.imgCost = 0.45;
         
         $scope.sayMessage = function (){
-            var msg = "Amany will get the job inshaAll ah";
+            var msg = "Amany will get the job inshaAllah";
             
             // using $filter service function to uppercase the msg 
             //var output = $filter('uppercase')(msg);
