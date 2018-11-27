@@ -11,21 +11,25 @@
     .filter('past', pastFilter);
     
     // Step3, Inject it with filterNameFilter
-    MsgController.$inject = ['$scope', '$filter', 'customFilter'];
-    function MsgController($scope, $filter, customFilter){
+    MsgController.$inject = ['$scope', '$filter', 'pastFilter'];
+    function MsgController($scope, $filter, pastFilter){
         $scope.name = "Amany";
         $scope.imgNum = "1";
         $scope.imgCost = 0.45;
-        
-        // Step3 >>
-        var msg = "Some Input";
-        customFilter(msg);
         
         $scope.sayMessage = function (){
             var msg = "Amany will get the job inshaAllah";
             
             // using $filter service function to uppercase the msg 
             var output = $filter('uppercase')(msg);
+            return output;
+        };
+        
+        // Step3 >>
+        $scope.makePastMsg = function (){
+            var msg = "Amany will get the job inshaAllah";
+        
+            var output = pastFilter(msg);
             return output;
         };
         
