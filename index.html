@@ -21,7 +21,8 @@
             Original: {{sayMessage()}} <br>
             Past: {{ makePastMsg() }} <br>
             <!-- ++Step3, Applying it in HTML with the new arguments -->
-            Past with Arg: {{ sayMessage() | past2 : 'will' : 'did' }}
+            Past with Arg: {{ sayMessage() | past2 : 'will' : 'did' }} <br>
+            Chain Filters: {{ sayMessage() | past2 : 'will' : 'did' | uppercase }}
             <div>
                 <button ng-click="changeImg()">
                     Change Image
